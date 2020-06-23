@@ -8,19 +8,19 @@ public class DesafioApplication {
     public static List<Integer> fibonacci() {
         List<Integer> fibonacciNumbers = new ArrayList<>();
 
-        int valorMaximo = 350;
-        int numeroAnterior = 0;
-        int numeroAtual = 1;
-        int proximoNumero = 0;
+        int maxValue = 350;
+        int previousNumber = 0;
+        int currentNumber = 1;
+        int nextNumber = 0;
 
-        fibonacciNumbers.add(numeroAnterior);
-        fibonacciNumbers.add(numeroAtual);
+        fibonacciNumbers.add(previousNumber);
+        fibonacciNumbers.add(currentNumber);
 
-        while (numeroAtual < valorMaximo) {
-            proximoNumero = numeroAtual + numeroAnterior;
-            fibonacciNumbers.add(proximoNumero);
-            numeroAnterior = numeroAtual;
-            numeroAtual = proximoNumero;
+        while (currentNumber < maxValue) {
+            nextNumber = currentNumber + previousNumber;
+            fibonacciNumbers.add(nextNumber);
+            previousNumber = currentNumber;
+            currentNumber = nextNumber;
         }
         return fibonacciNumbers;
     }
