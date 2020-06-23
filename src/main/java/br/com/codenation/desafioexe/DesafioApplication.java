@@ -9,6 +9,10 @@ public class DesafioApplication {
     private DesafioApplication() {}
 
     public static List<Integer> fibonacci() {
+        return fibonacci(MAX_VALUE);
+    }
+
+    public static List<Integer> fibonacci(int maxValue) {
         List<Integer> fibonacciNumbers = new ArrayList<>();
 
         int previousNumber = 0;
@@ -18,7 +22,7 @@ public class DesafioApplication {
         fibonacciNumbers.add(previousNumber);
         fibonacciNumbers.add(currentNumber);
 
-        while (currentNumber < MAX_VALUE) {
+        while (currentNumber < maxValue) {
             nextNumber = currentNumber + previousNumber;
             fibonacciNumbers.add(nextNumber);
             previousNumber = currentNumber;
@@ -28,6 +32,6 @@ public class DesafioApplication {
     }
 
     public static Boolean isFibonacci(Integer number) {
-        return fibonacci().contains(number);
+        return fibonacci(number).contains(number);
     }
 }
