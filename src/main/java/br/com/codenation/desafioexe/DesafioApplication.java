@@ -6,6 +6,8 @@ import java.util.List;
 public class DesafioApplication {
     private static final int  MAX_VALUE = 350;
 
+    private DesafioApplication() {}
+
     public static List<Integer> fibonacci() {
         List<Integer> fibonacciNumbers = new ArrayList<>();
 
